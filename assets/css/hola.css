@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#hola_amigo{
+    width: 100%;
+    position: relative;
+    height: 100;
+}
+
+
+#hola_secA{
+    background-color: var(--first-color);
+
+}
+#hola_secB{
+    background-color: #fff;
+}
+
+
+#hola_secA,
+#hola_secB{
+    height: 100vh;
+    width: 100%;
+}
+
+#hola_amigo{
+    display: block;
+    
+}
+#hola_amigo{
+    display: flex;
+}
+
+#hola_secA,
+#hola_secB{
+    height: 100vh;
+    width: 50%;
+}
+
+#hola_img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+#hola_img_holder{
+    height: 95vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+#hola_img_holder img{
+    position: relative;
+    height: 100%;
+
+}
+
+.hd_header{
+    padding-top: 4rem;
+}
+  
+
+
+
+/* ..................................................................... */
+
+#form_sec{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contactForm {
+    padding: 7%;
+    background: #fff;
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); */
+}
+
+
+.contactForm .formBox {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    
+}
+
+.contactForm .formBox .inputBox {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.contactForm .formBox .inputBox.w50 {
+    width: 47%;
+}
+
+.contactForm .formBox .inputBox.w100 {
+    width: 100%;
+}
+
+.contactForm .formBox .inputBox input,
+.contactForm .formBox .inputBox textarea {
+    width: 100%;
+    resize: none;
+    padding: 5px 0;
+    font-size: 18px;
+    color: #333;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #777;
+}
+
+.contactForm .formBox .inputBox textarea {
+    height: 120px;
+}
+
+.contactForm .formBox .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    pointer-events: none;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+.contactForm .formBox .inputBox input:focus~span,
+.contactForm .formBox .inputBox input:valid~span,
+.contactForm .formBox .inputBox textarea:focus~span,
+.contactForm .formBox .inputBox textarea:valid~span {
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: var(--first-color);
+    font-weight: 500;
+}
+
+.contactForm .formBox .inputBox input[type="submit"] {
+    position: relative;
+    cursor: pointer;
+    background-color: var(--first-color);
+    color: #fff;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+}
+
+.contactForm .formBox .inputBox input[type="submit"]:hover {
+    background: var(--first-color-alt);
+}
+
+
+@media (max-width: 991px) {
+    .hd_header{
+        padding-top: 0rem;
+      }
+      
+    #hola_img_holder{
+        height: 85vh;
+    }
+    
+    #hola_img_holder img{
+        position: relative;
+        height: 100%;
+        width: 100%;
+    
+    }
+    .contactForm {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .contactForm .formBox .inputBox.w50 {
+        display: block;
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    #hola_img_holder{
+        height: 72vh;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .contactForm {
+        width: 80% !important;
+    }
+
+    .contactInfo {
+        width: 80% !important;
+    }
+    #hola_img_holder{
+        height: 65vh;
+    }
+}
+
+
+/* For small devices */
+@media screen and (max-width: 568px) {
+    #hola_amigo{
+        flex-direction: column-reverse;
+    }
+    #hola_secA{
+        height: 60vh;
+        width: 100%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+    }
+    #hola_secB{
+        height: 80vh;
+        width: 100%;
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+    #hola_img_holder{
+        height: 100%;
+        width: 100%; 
+    }
+
+    #hola_img_holder img{
+        height: 75%;
+        width: auto;
+        
+    }
+
+}
+
+
+/* 480 -> Nokia N9 */
+@media only screen and (max-width: 480px) {
+    .contactForm {
+        width: 90% !important;
+    }
+
+    .contactInfo {
+        width: 90% !important;
+    }
+}
+
+/* 414 -> iphone 6/7/8 plus */
+@media only screen and (max-width: 414px) {
+    .contactForm {
+        width: 95% !important;
+    }
+
+    .contactInfo {
+        width: 95% !important;
+    }
+
+    #hola_secA{
+        height: 40vh;
+    }
+
+    #hola_secB{
+        height: 60vh;
+    }
+
+    #hola_img_holder img{
+        height: 75%;
+        width: auto;
+        
+    }
+
+}
+
+
